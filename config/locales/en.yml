@@ -1,0 +1,9 @@
+en:
+  messages:
+    same_sender_and_recipient: "Sender account and Recipient account cannot be same"
+    accounts_of_different_banks: "Sender account and Recipient account must be of same bank"
+    insufficient_balance: "Sender account has unsufficient balance for this transaction"
+    transaction_date_in_past: "Transaction Date can't be in the past"
+    non_updatable_transaction: "Cannot update a completed or duplicate transaction"
+    not_a_duplicate: "Transaction doesn't have any duplicate"
+    failed_to_acquire_lock: 'Failed to acquire required locks, please try again'

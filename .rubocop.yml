@@ -1,0 +1,73 @@
+# Use Ruby 3.0.0
+AllCops:
+  TargetRubyVersion: 3.0.0
+  TargetRailsVersion: 6.1
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'vendor/bundle/**/*'
+    - 'bin/**/*'
+    - 'lib/tasks/**/*'
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+# There's no need to add documentation to each one of our classes
+Documentation:
+  Enabled: false
+
+# Lines shouldn't be longer than 120 characters
+Layout/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 78
+
+# Methods shouldn't be longer than X lines
+Metrics/MethodLength:
+  Max: 17
+
+# Methods shouldn't have more than 4 parameters
+Metrics/ParameterLists:
+  Max: 4
+
+# Avoid errors for Ruby 2.6.3
+# Style/FrozenStringLiteralComment:
+#   Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Rails/MailerName:
+  Enabled: false
+
+# Always use double quotes for strings
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+# Use only 'raise', as opposed to 'fail', for exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Use arrays of symbols without %i
+Style/SymbolArray:
+  Enabled: true
+
+# Multi line have their place especially in expect { } statements
+Style/BlockDelimiters:
+  Enabled: false
+
+# Sometimes it's much clearer to use self.*
+Style/RedundantSelf:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+
